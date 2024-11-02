@@ -13,5 +13,8 @@ public class ScoreManager : MonoBehaviour
     {
         currentScore += score;
         scoreText.text = $"c‚:{currentScore}";
+        
+        // ‘—M
+        GetComponent<MyScript>().room?.Send("updateScore", currentScore);
     }
 }
